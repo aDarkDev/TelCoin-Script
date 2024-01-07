@@ -6,7 +6,7 @@ function sleep(ms) {
     console.log(`making coins: ${count} with hash ${hash}`);
     const data = {
       count: count,
-      webAppData: "ur",
+      webAppData: "your web app data",
       hash: hash
     };
   
