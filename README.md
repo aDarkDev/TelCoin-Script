@@ -10,7 +10,7 @@
 This script has been thoroughly tested and is working fine.
 ## Test image:
 
-[!image](https://raw.githubusercontent.com/ConfusedCharacter/NotCoin-Cheat/main/test-image.png)
+[image](!https://raw.githubusercontent.com/ConfusedCharacter/NotCoin-Cheat/main/test-image.png)
 
 I would appreciate it if you give a star and mention the repo❤️.
 
