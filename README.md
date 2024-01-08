@@ -30,6 +30,6 @@ node NotCoin.js
 
 ![image](https://raw.githubusercontent.com/ConfusedCharacter/NotCoin-Cheat/main/test-image.png)
 
-I would appreciate it if you give a star and mention the repo❤️.
+I would appreciate it if you give a star and mention the repository❤️.
 
 **Author: ConfusedCharacter**
