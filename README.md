@@ -7,11 +7,10 @@
 
 * You can obtain the required data, "webapp-data" and "authorize token," with your knowledge and run the script.
 
-I would appreciate it if you give a star and mention the repo.
-
 This script has been thoroughly tested and is working fine.
 ## Test image:
 
 [image](https://raw.githubusercontent.com/ConfusedCharacter/NotCoin-Cheat/main/test-image.png)
 
+I would appreciate it if you give a star and mention the repo❤️.
 Author: ConfusedCharacter
