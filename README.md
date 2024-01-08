@@ -14,4 +14,4 @@ This script has been thoroughly tested and is working fine.
 
 I would appreciate it if you give a star and mention the repo❤️.
 
-Author: ConfusedCharacter
+**Author: ConfusedCharacter**
