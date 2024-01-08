@@ -1,5 +1,5 @@
 # NotCoin-Cheat
-[NotCoin_bot cheat script](https://t.me/notcoin_bot)
+[NotCoin_bot cheat script](https://t.me/notcoin_bot) first time in github and ... .
 
 ### The purpose of this cheat is to gather coins automatically and then wait 120 seconds before gathering coins again. 
 
