@@ -6,7 +6,7 @@
 * This scrupt has been completely reverse-engineered from notcoin bot.
 
 * You should just login to your account with script.
-* 
+
 * The algorithm of the script is such that cheats are not detected
 
 This script has been thoroughly tested and is working fine.
