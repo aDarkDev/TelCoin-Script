@@ -87,22 +87,9 @@ getAuthToken()
 coin_boost = 4
 start_hash = 1
 
-try:
-    count = coin_boost
-    send_result = send_coin(count,start_hash)
-    hashes = send_result['data'][0]['hash']
-    start_hash = evaluate_hash(hashes)
-    
-    print("started_hash",start_hash)
-    print("lastAvailableCoins",send_result['data'][0]['lastAvailableCoins'])
-    if send_result['data'][0]['lastAvailableCoins'] < 60:
-        print("coins limited. sleeping 120")
-        time.sleep(120)    
-    time.sleep(2)
-except KeyError:
-    getAuthToken()
-    print("Session Expired Getting new session")
-    
+send_result = send_coin(coin_boost,1)
+start_hash = evaluate_hash(send_result['data'][0]['hash'])
+
 while True:
     try:
         count = (random.randint(20,100) // coin_boost) * coin_boost
@@ -113,7 +100,7 @@ while True:
         print("started_hash",start_hash)
         print("lastAvailableCoins",send_result['data'][0]['lastAvailableCoins'])
         if send_result['data'][0]['lastAvailableCoins'] < 60:
-            print("coins limited. sleeping 120")
+            print("collect limited. sleeping 120")
             time.sleep(120)    
         time.sleep(2)
     except KeyError:
