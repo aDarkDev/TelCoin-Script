@@ -5,7 +5,7 @@
 
 * This scrupt has been completely reverse-engineered from notcoin bot.
 
-* You can obtain the required data, "webapp-data" and "authorize token," with your knowledge and run the script.
+* You should just login to your account with script.
 
 This script has been thoroughly tested and is working fine.
 
@@ -15,15 +15,15 @@ install nodejs first
 ```bash
 sudo apt install nodejs
 ```
-install axios library
+install telethon library
 
 ```bash
-npm install axios
+pip3 install telethon
 ```
 run it!
 
 ```bash
-node NotCoin.js
+python3 NotCoin.py
 ```
 
 ## Test image:
