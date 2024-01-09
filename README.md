@@ -9,7 +9,7 @@
 
 * The algorithm of the script is such that cheats are not detected
 
-This script has been thoroughly tested and is working fine.
+* This script has been thoroughly tested and is working fine.
 
 # installation:
 
