@@ -6,9 +6,7 @@ import base64
 import random
 import time
 
-coin_boost = 0
 webappdata_global = ""
-
 client = TelegramClient("cheat",123,"123").start()
 
 session = requests.Session()
@@ -56,7 +54,6 @@ def getAuthToken():
     session.headers.update({"content-length":str(len(data))})
     r = session.post("https://clicker-api.joincommunity.xyz/auth/webapp-session",json=data)
     session.headers.update({"Authorization":"Bearer " + r.json()['data']['accessToken']})
-    print(session.headers)
 
 def evaluate_js(string):
     if string == "document.querySelectorAll('body').length":
@@ -68,7 +65,6 @@ def evaluate_js(string):
 
     open("evalit.js","w").write(f"console.log({string})")
     result = subprocess.getoutput("node evalit.js").replace(" ","")
-    print("eval result",result)
     try:
         return int(result)
     except:
@@ -88,7 +84,7 @@ def evaluate_hash(hashes):
         return evaluate_js(base_64(hashes[0]))
 
 getAuthToken()
-coin_boost = 7
+coin_boost = 4
 start_hash = 1
 
 try:
