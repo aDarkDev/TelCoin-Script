@@ -3,7 +3,7 @@
 
 ### Automated Script
 
-* This scrupt has been completely reverse-engineered from notcoin bot.
+* This script has been completely reverse-engineered from notcoin bot.
 
 * You should just login to your account with script.
 
