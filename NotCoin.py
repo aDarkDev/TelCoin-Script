@@ -115,7 +115,7 @@ while True:
         if send_result['data'][0]['lastAvailableCoins'] < 60:
             print("collect limited. sleeping 120")
             time.sleep(120)    
-        time.sleep(4)
+        time.sleep(7)
     except KeyError:
         getAuthToken()
         print("Session Expired Getting new session")
