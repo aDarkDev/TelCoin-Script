@@ -13,7 +13,7 @@ This script has been thoroughly tested and is working fine.
 
 # installation:
 
-Edit line 89 and 110 in "NotCoin.py". 89 is your coins multiplies and 110 is your coin collect range. range should be logical.
+Edit line 89 and 93 in "NotCoin.py". 89 is your coins multiplies and 93 is your coin collect range. range should be logical.
 
 install nodejs first
 ```bash
