@@ -11,6 +11,8 @@ This script has been thoroughly tested and is working fine.
 
 # installation:
 
+Edit line 89 and 110 in "NotCoin.py"
+
 install nodejs first
 ```bash
 sudo apt install nodejs
