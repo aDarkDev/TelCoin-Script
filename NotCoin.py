@@ -119,3 +119,4 @@ while True:
     except KeyError:
         getAuthToken()
         print("Session Expired Getting new session")
+        time.sleep(2)
