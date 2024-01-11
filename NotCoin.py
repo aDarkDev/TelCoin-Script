@@ -53,7 +53,10 @@ def getAuthToken():
     
     session.headers.update({"content-length":str(len(data))})
     r = session.post("https://clicker-api.joincommunity.xyz/auth/webapp-session",json=data)
-    session.headers.update({"Authorization":"Bearer " + r.json()['data']['accessToken']})
+    try:
+        session.headers.update({"Authorization":"Bearer " + r.json()['data']['accessToken']})
+    except:
+        pass
 
 def evaluate_js(string):
     if string == "document.querySelectorAll('body').length":
