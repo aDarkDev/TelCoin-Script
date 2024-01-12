@@ -14,7 +14,8 @@
 # installation:
 
 Edit line `10` and `90` in "NotCoin.py". In line `90`, it should be your coins multiplied by one click. In line `10`, you should put your Telegram `api_id` and `api_hash`.
-you can get api id and hash from here <my.telegram.org> part development.
+
+you can get api id and hash from here <https://my.telegram.org> development part.
 
 install nodejs first
 ```bash
