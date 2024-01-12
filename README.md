@@ -13,7 +13,7 @@
 
 # installation:
 
-Edit line 87 and 108 in "NotCoin.py". 87 is your coins multiplies and 108 is your coin collect range. range should be logical.
+Edit line `10` and `90` in "NotCoin.py". In line `90`, it should be your coins multiplied by one click. In line `10`, you should put your Telegram `api_id` and `api_hash`.
 
 install nodejs first
 ```bash
