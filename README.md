@@ -11,9 +11,13 @@
 
 * This script has been thoroughly tested and is working fine.
 
+## Anti-Bot Bypass Added.
+* Once again, solved this problem for the first time.
+* Special thanks to [slukin1](https://github.com/slukin1).
+  
 # installation:
 
-Edit line `10` and `90` in "NotCoin.py". In line `90`, it should be your coins multiplied by one click. In line `10`, you should put your Telegram `api_id` and `api_hash`.
+Edit line `11,12` and `129` in "NotCoin.py". In line `129`, it should be your coins multiplied by one click. In line `11,12`, you should put your Telegram `api_id` and `api_hash`.
 
 you can get api id and hash from here <https://my.telegram.org> development part.
 
@@ -26,6 +30,13 @@ install telethon library
 ```bash
 pip3 install telethon
 ```
+
+install cloudscraper library
+
+```bash
+pip3 install cloudscraper
+```
+
 run it!
 
 ```bash
