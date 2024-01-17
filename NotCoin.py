@@ -1,19 +1,50 @@
 from telethon import TelegramClient,functions
+from requests.adapters import HTTPAdapter
+from requests.sessions import Session
 from urllib.parse import unquote
-from cloudscraper import create_scraper
 import subprocess
 import base64
 import random
 import json
 import time
+import ssl
 
 webappdata_global = ""
 api_id = 123 # your api id
-api_hash = '123' # your api hash
+api_hash = "123" # your api hash
 client = TelegramClient("cheat",api_id,api_hash).start()
 
-session = create_scraper(delay=10, browser="chrome") 
 
+
+class TLSv1_3_BYPASS(HTTPAdapter):
+    ciphers = "TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-RSA-AES128-SHA:ECDHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA:AES256-SHA:DES-CBC3-SHA"
+    
+    def __init__(self, *args, **kwargs):
+        self.ssl_context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
+        self.ssl_context.orig_wrap_socket = self.ssl_context.wrap_socket
+        self.ssl_context.wrap_socket = self.wrap_socket
+        self.ssl_context.set_ciphers(TLSv1_3_BYPASS.ciphers)
+        self.ssl_context.set_ecdh_curve("prime256v1")
+        self.ssl_context.minimum_version = ssl.TLSVersion.TLSv1_3
+        self.ssl_context.maximum_version = ssl.TLSVersion.TLSv1_3
+        super(TLSv1_3_BYPASS, self).__init__(**kwargs)
+
+    def wrap_socket(self, *args, **kwargs):
+        self.ssl_context.check_hostname = True
+        return self.ssl_context.orig_wrap_socket(*args, **kwargs)
+
+    def init_poolmanager(self, *args, **kwargs):
+        kwargs["ssl_context"] = self.ssl_context
+        kwargs["source_address"] = None
+        return super(TLSv1_3_BYPASS, self).init_poolmanager(*args, **kwargs)
+
+    def proxy_manager_for(self, *args, **kwargs):
+        kwargs["ssl_context"] = self.ssl_context
+        kwargs["source_address"] = None
+        return super(TLSv1_3_BYPASS, self).proxy_manager_for(*args, **kwargs)
+
+session = Session()
+session.mount("https://", TLSv1_3_BYPASS())
 session.headers = headers = {
     'Host': 'clicker-api.joincommunity.xyz',
     'Accept': 'application/json',
@@ -30,7 +61,8 @@ session.headers = headers = {
 }
 
 def send_options():
-    cli = create_scraper(delay=10, browser="chrome") 
+    cli = session = Session()
+    session.mount("https://", TLSv1_3_BYPASS())
 
     headers = {
         "Host": "clicker-api.joincommunity.xyz",
@@ -120,7 +152,7 @@ def evaluate_hash(hashes):
         return evaluate_js(base_64(hashes[0]))
 
 getAuthToken()
-coin_boost = 4 # your coins multiples
+coin_boost = 10 # your coins multiples
 start_hash = -1
 
 try:
