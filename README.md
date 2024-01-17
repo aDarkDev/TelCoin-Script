@@ -12,7 +12,7 @@
 * This script has been thoroughly tested and is working fine.
 
 ## New Update:
-NotCoin Security now uses `TLS v1.3` to secure NotCoin APIs and detect bots. To bypass NotCoin Cloudflare anti-bot measures, you have two options:
+NotCoin Security now uses `TLS v1.3` to secure NotCoin APIs and detect bots. To bypass NotCoin Cloudflare anti-bot measures, you have two ways:
 1. Use the `cloudscraper` library in my GitHub repository.
 2. Edit your current `cloudscraper` library .
 
