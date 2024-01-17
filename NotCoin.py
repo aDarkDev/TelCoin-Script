@@ -1,6 +1,6 @@
 from telethon import TelegramClient,functions
 from urllib.parse import unquote
-import cloudscraper
+from cloudscraper import create_scraper
 import subprocess
 import base64
 import random
@@ -12,11 +12,7 @@ api_id = 123 # your api id
 api_hash = '123' # your api hash
 client = TelegramClient("cheat",api_id,api_hash).start()
 
-cipher = 'ECDHE+AESGCM:ECDHE+CHACHA20:DHE+AESGCM:DHE+CHACHA20:ECDH+AESGCM:DH+AESGCM:ECDH+AES:DH+AES:RSA+AESGCM:RSA+AES:!aNULL:!eNULL:!MD5:!DSS:!ECDHE+SHA:!AES128-SHA'
-session = cloudscraper.CloudScraper(
-    cipherSuite=cipher
-)
-
+session = create_scraper(delay=10, browser="chrome") 
 
 session.headers = headers = {
     'Host': 'clicker-api.joincommunity.xyz',
@@ -34,9 +30,7 @@ session.headers = headers = {
 }
 
 def send_options():
-    cli = cloudscraper.CloudScraper(
-        cipherSuite=cipher
-    )
+    cli = create_scraper(delay=10, browser="chrome") 
 
     headers = {
         "Host": "clicker-api.joincommunity.xyz",
