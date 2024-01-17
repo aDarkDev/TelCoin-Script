@@ -10,10 +10,6 @@
 * The algorithm of the script is such that cheats are not detected
 
 * This script has been thoroughly tested and is working fine.
-
-## Anti-Bot Bypass Added.
-* Once again, solved this problem for the first time.
-* Special thanks to [slukin1](https://github.com/slukin1).
   
 # installation:
 
