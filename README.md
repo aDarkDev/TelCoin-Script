@@ -34,7 +34,7 @@ install cloudscraper library
 pip3 install cloudscraper
 ```
 Find your Cloudscraper path in Linux at `/home/username/.local/lib/python3.xx/site-packages/cloudscraper`. 
-After that, go ahead and open `__init__.py` and edit line 86 as shown in the picture.
+After that, go ahead open `__init__.py` and edit line 86 as shown in the picture.
 
 ![image](https://raw.githubusercontent.com/ConfusedCharacter/NotCoin-Cheat/main/help-cloud.png)
 
