@@ -59,12 +59,9 @@ session.headers = headers = {
     'Accept-Encoding': 'gzip, deflate',
     'Accept-Language': 'en-US,en;q=0.9'
 }
-
-def send_options():
-    cli = session = Session()
-    session.mount("https://", TLSv1_3_BYPASS())
-
-    headers = {
+cli = session = Session()
+cli.mount("https://", TLSv1_3_BYPASS())
+cli.headers = {
         "Host": "clicker-api.joincommunity.xyz",
         "Accept": "*/*",
         "Access-Control-Request-Method": "POST",
@@ -77,8 +74,9 @@ def send_options():
         "Referer": "https://clicker.joincommunity.xyz/",
         "Accept-Encoding": "gzip, deflate",
         "Accept-Language": "en-US,en;q=0.9"
-    }
-    cli.headers = headers
+}
+
+def send_options():
     r = cli.options('https://clicker-api.joincommunity.xyz/clicker/core/click')
     print(r.status_code)
 
