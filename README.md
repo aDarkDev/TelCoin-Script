@@ -18,7 +18,7 @@ we add `TLS v1.3` to script without extra library like `cloudscraper`, enjoy scr
 
 # installation:
 
-Edit line `11,12` and `129` in "NotCoin.py". In line `129`, it should be your coins multiplied by one click. In line `11,12`, you should put your Telegram `api_id` and `api_hash`.
+Edit line `11,12` and `153` in "NotCoin.py". In line `153`, it should be your coins multiplied by one click. In line `11,12`, you should put your Telegram `api_id` and `api_hash`.
 
 you can get api id and hash from here <https://my.telegram.org> development part.
 
