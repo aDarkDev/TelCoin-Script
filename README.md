@@ -1,4 +1,4 @@
-# NotCoin-Cheat
+# TelCoin-Script
 [NotCoin_bot cheat script](https://t.me/notcoin_bot) first time in github and ... .
 
 ### Automated Script
@@ -39,7 +39,7 @@ pip3 install cloudscraper
 ```
 
 ```bash
-git clone https://github.com/ConfusedCharacter/NotCoin-Cheat; cd NotCoin-Cheat
+git clone https://github.com/aDarkDev/TelCoin-Script; cd TelCoin-Script
 ```
 
 run it!
@@ -50,8 +50,8 @@ python3 NotCoin.py
 
 ## Test image:
 
-![image](https://raw.githubusercontent.com/ConfusedCharacter/NotCoin-Cheat/main/test-image.png)
+![image](https://raw.githubusercontent.com/aDarkDev/NotCoin-Cheat/main/test-image.png)
 
 I would appreciate it if you give a star and mention the repository❤️.
 
-**Author: ConfusedCharacter**
+**Author: aDarkDev**
